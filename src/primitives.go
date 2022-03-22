@@ -60,4 +60,26 @@ func main() {
 	fmt.Println(e << 3) // 2^3 * 2^3 = 2^6
 	fmt.Println(e >> 3) // 2^3 / 2^3 = 2^0
 
+
+	/*
+	* STRINGS *
+	*/
+	s := `"abcdefghijklmnopqrstuvwxyz "`
+	fmt.Printf("%v, %T = %v, %T\n", s[0], s[0], string(s[0]), s[0])
+	// strings are immutable
+	// s[0] = "T"
+	// will not work
+	
+	// you can also convert strings to bytes
+	bts := []byte(s)
+	fmt.Printf("%v, %T\n", bts, bts)
+
+
+	/*
+	* RUNES *
+	*/
+	// make sure to read the documentation first before using runes
+	// runes are single characters
+	r := 'a'
+	fmt.Printf("%v, %T\n", r, r)
 }
