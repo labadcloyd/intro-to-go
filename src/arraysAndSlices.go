@@ -116,6 +116,11 @@ func main() {
 	fmt.Printf("\nPopping off middle elements from a slice")
 	fmt.Printf("\nLength: %v, Capacity: %v", len(b2), cap(b2))
 	fmt.Printf("\nvalue: %v ", b2)
+	//! becareful when using this as it will make changes to-
+	//! the original slice
+	fmt.Printf("\nOriginal Slice")
+	fmt.Printf("\nLength: %v, Capacity: %v", len(a3), cap(a3))
+	fmt.Printf("\nvalue: %v ", a3)
 	fmt.Printf("\n")
 
 }
