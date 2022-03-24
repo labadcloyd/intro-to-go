@@ -47,6 +47,8 @@ func main() {
 	* SLICES
 	*/
 	// slices are almost identical to arrays but with a few exceptions
+	// slices dont have a specification on their length without us-
+	// ing the three dots which we use with arrays
 	c := []int {99, 98, 97}
 	fmt.Printf("\nSlices: %v", c)
 
