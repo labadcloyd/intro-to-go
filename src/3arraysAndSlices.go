@@ -84,7 +84,7 @@ func main() {
 	fmt.Printf("\n")
 	// however using this way can be expensive when dealing with larger slices
 	// an alternative to this would by using the make function on declaring the var
-	// because this way the compiler can know ahead of time the capacity of the array
+	// because this way the compiler can know ahead of time the capacity of the slice
 	a3 := make([]int, 0, 100) 
 	fmt.Printf("\nDeclaring slices using the make function")
 	fmt.Printf("\nLength: %v, Capacity: %v", len(a3), cap(a3))
