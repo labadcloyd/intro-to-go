@@ -19,7 +19,6 @@ func main() {
 		"Nevada":     211000,
 		"Florida":    199000,
 	}
-
 	if _, floridaExists := statePopulation["Florida"]; floridaExists {
 		fmt.Printf("Florida Exists\n")
 	}
@@ -60,6 +59,54 @@ func main() {
 		fmt.Println("function return true was NOT called")
 	}
 
+	/*
+	* SWITCH STATEMENTS
+	*/
 
+	// basic switch statement
+	fmt.Printf("\n")
+	switch 3 {
+	case 1, 5, 10:
+		fmt.Println("Case is either 1, 5, or 10")
+	case 2 | 3, 4, 9:
+		fmt.Println("Case is either 2, 3, 4, or 9")
+	default:
+		fmt.Println("Case is neither 1, 3, 4, 5, 9, or 19")
+	}
+
+	// you can write the same if statement in a switch
+	// where you can do operations
+	switch i := 3 + 2; i  {
+	case 1, 5, 10:
+		fmt.Println("Case is either 1, 5, or 10")
+	case 2 | 3, 4, 9:
+		fmt.Println("Case is either 2, 3, 4, or 9")
+	default:
+		fmt.Println("Case is neither 1, 3, 4, 5, 9, or 19")
+	}
+	i :=  5
+	switch {
+	case i > 5:
+		fmt.Println("Case is greater than 5")
+	case i < 5:
+		fmt.Println("Case is lesser than 5")
+	default:
+		fmt.Println("Case is neither greater or lesser than 5")
+	}
+
+	// you can also check the types
+	var j interface{} = [3]int{}
+	switch j.(type) {
+	case int:
+		fmt.Println("J is an integer")
+	case float64: 
+		fmt.Println("J is a float64")
+	case [2]int: 
+		fmt.Println("J is an array of 2 integers")
+	case [3]int: 
+		fmt.Println("J is an array of 3 integers")
+	default:
+		fmt.Println("J is another type")
+	}
 
 }
