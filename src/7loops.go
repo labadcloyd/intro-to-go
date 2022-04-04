@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func main() {
+	/*
+	* Basics of loops
+	*/
 	for i := 0; i < 10; i++ {
 		fmt.Printf("%v, ", i)
 	}
@@ -74,6 +77,9 @@ func main() {
 	}
 	fmt.Printf("\n")
 
+	/*
+	* Looping through data
+	*/
 	// looping through a slice
 	sample := make([]int, 0, 100)
 	sample = append(sample, 24, 25, 26, 27, 28, 29, 30)

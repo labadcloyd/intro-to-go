@@ -9,6 +9,7 @@ func main() {
 	/*
 		* BOOLEANS *
 	*/
+	fmt.Printf("\nBOOLEANS\n")
 	isYoung := true
 	fmt.Printf("is young: %v %T", isYoung, isYoung)
 	
@@ -24,6 +25,7 @@ func main() {
 	/*
 	* INTEGERS *
 	*/
+	fmt.Printf("\nINTEGERS\n")
 	var defaultInt int
 	fmt.Printf("\nDefault value: %v %T", defaultInt, defaultInt)
 	// int 8 from -128 to 127
@@ -64,8 +66,10 @@ func main() {
 	/*
 	* STRINGS *
 	*/
-	s := `"abcdefghijklmnopqrstuvwxyz "`
-	fmt.Printf("%v, %T = %v, %T\n", s[0], s[0], string(s[0]), s[0])
+	fmt.Printf("\nSTRINGS\n")
+	s := "abcdefghijklmnopqrstuvwxyz "
+	fmt.Printf("s[0]: %v, type of s[0]:%T, string of s[0]:%v, type of s[0]:%T\n", s[0], s[0], string(s[0]), s[0])
+	fmt.Printf("%v\n", s)
 	// strings are immutable
 	// s[0] = "T"
 	// will not work
@@ -74,10 +78,10 @@ func main() {
 	bts := []byte(s)
 	fmt.Printf("%v, %T\n", bts, bts)
 
-
 	/*
 	* RUNES *
 	*/
+	fmt.Printf("\nRUNES\n")
 	// make sure to read the documentation first before using runes
 	// runes are single characters
 	r := 'a'
