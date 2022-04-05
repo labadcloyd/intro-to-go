@@ -24,7 +24,8 @@ func main() {
 	// defer fmt.Printf("middle, ")
 	// defer fmt.Printf("last ")
 
-	fetchDataDefer()
+	// fetchDataDefer()
+	runServerPanic()
 }
 
 func fetchDataDefer() {
@@ -38,4 +39,15 @@ func fetchDataDefer() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%s", data)
+}
+
+func runServerPanic() {
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+		fmt.Println("Recieved Request")
+		w.Write([]byte("Hello World!"))
+	})
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
+		panic(err.Error())
+	}
 }
