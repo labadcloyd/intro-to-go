@@ -66,7 +66,7 @@ func main() {
 	fmt.Printf("\n")
 
 	// slices are naturally reference types
-	// so when you copy an array to a variable, youre not creating a new array
+	// so when you copy a slice to a variable, youre not creating a new slice
 	// instead youre making a refference
 	d := c
 	d[1] = 90

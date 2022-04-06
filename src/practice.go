@@ -11,7 +11,7 @@ func main() {
 
 	// slice of string maps
 	type KV struct {
-		value	string
+		value string
 	}
 	// A FASTER IMPLEMENTATION
 	objects1 := make([]KV, iterations)
@@ -26,7 +26,7 @@ func main() {
 
 	fmt.Println("len:", len(objects1))
 	fmt.Printf("%d iterations took %s\n", iterations, duration1)
-	
+
 	// NORMAL IMPLEMENTATION
 	objects := make([]KV, 0, iterations)
 	timeStart := time.Now()
@@ -55,6 +55,5 @@ func main() {
 
 	fmt.Println("len:", len(objectsAllocated))
 	fmt.Printf("%d iterations took (with pre-allocation) %s\n", iterations, durationAllocated)
-
 
 }
