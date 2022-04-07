@@ -31,6 +31,14 @@ func main() {
 	func(){
 		fmt.Println("Im an anonymous function.")
 	}()
+
+	//* METHODS
+	// methods allows you to add functions to objects
+	g := greeter {
+		name: "Cloyd",
+		greeting: "Hi there",
+	}
+	g.greet()
 }
 
 func sayMessage(msg string, len int) {
@@ -39,11 +47,13 @@ func sayMessage(msg string, len int) {
 	}
 }
 
+// function with pointers
 func sayGreeting(greeting string, name *string) {
 	fmt.Printf("%v %v\n", greeting, *name)
 	*name = "chloe"
 }
 
+// for dot notation
 func joinSlice(msg string, numbers ...int){
 	fmt.Println(numbers)
 	result := 0
@@ -53,9 +63,21 @@ func joinSlice(msg string, numbers ...int){
 	fmt.Println(msg, result)
 }
 
+// for returning multiple values
 func divide (a float64, b float64) (float64, error) {
 	if b == 0.0 {
 		return 0.0, fmt.Errorf("Cannot be divided by zero")
 	}
 	return a/b, nil
 }
+
+// for methods
+type greeter struct {
+	name			string
+	greeting	string
+}
+func (g greeter) greet(){
+	fmt.Printf("\nMETHOD FUNCTION\n")
+	fmt.Println(g.greeting, g.name)
+} // a method is created by creating an anonymous function with the method name
+// and in this case we have the greet method
