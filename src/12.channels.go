@@ -26,13 +26,13 @@ func main() {
 }
 
 func sendValue(c chan int, value int) {
+	defer wg.Done()
 	fmt.Println("Processing go routine", value)
 	c <- value
 	fmt.Println("Finished processing go routine")
-	wg.Done()
 }
 func recieveValue(c chan int) {
+	defer wg.Done()
 	value := <- c
 	fmt.Println(value)
-	wg.Done()
 }
